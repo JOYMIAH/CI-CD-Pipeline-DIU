@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        // git branch: 'main', url: 'https://github.com/JOYMIAH/testing-ci-cd.git'
+        // git branch: 'main', url: 'https://github.com/JOYMIAH/CI-CD-Pipeline-DIU.git'
       }
     }
     stage('Build and Test') {
@@ -47,7 +47,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "testing-ci-cd"
+            GIT_REPO_NAME = "CI-CD-Pipeline-DIU "
             GIT_USER_NAME = "JOYMIAH"
         }
         steps {
