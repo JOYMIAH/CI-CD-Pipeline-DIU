@@ -12,8 +12,12 @@ public class StartApplication {
 
     @GetMapping("/")
     public String index(final Model model) {
-        model.addAttribute("title", "Successfuly built Test & Deploy Using Comprehensive CI-CD Pipeline.Ashekur Rahman");
+        model.addAttribute("title", "Successfully Built & Deployed Using Comprehensive CI-CD Pipeline");
+        model.addAttribute("subtitle", "Ashekur Rahman");
         model.addAttribute("msg", "This application is deployed on to Kubernetes using Argo CD By Joy Miah");
+        model.addAttribute("colorScheme", "Blue and White");
+        model.addAttribute("font", "Arial");
+        model.addAttribute("layout", "Grid");
         return "index";
     }
 
