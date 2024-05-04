@@ -52,6 +52,11 @@ pipeline {
         }
       }
     }
+    stage('Trivy Scan') {
+      steps {
+        sh 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image joymiah1/cicd:${BUILD_NUMBER} > trivyImage.txt'
+      }
+    }
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "CI-CD-Pipeline-DIU "
@@ -72,21 +77,16 @@ pipeline {
             }
         }
     }
-    stage('Trivy Scan') {
-      steps {
-        sh 'trivy image joymiah1/cicd:${BUILD_NUMBER} > trivyImage.txt'
-      }
-      post {
-        always {
-          emailext (
-            attachLog: true,
-            subject: "${currentBuild.result}",
-            body: "Project: ${env.JOB_NAME}\n\nBuild Number: ${env.BUILD_NUMBER}\n\nURL: ${env.BUILD_URL}\n",
-            to: "joymiah.cse@gmail.com",
-            attachmentsPattern: 'trivyImage.txt'
-          )
-        }
-      }
+  }
+  post {
+    always {
+      emailext (
+        attachLog: true,
+        subject: "${currentBuild.result}",
+        body: "Project: ${env.JOB_NAME}\n\nBuild Number: ${env.BUILD_NUMBER}\n\nURL: ${env.BUILD_URL}\n",
+        to: "joymiah.cse@gmail.com",
+        attachmentsPattern: 'trivyImage.txt'
+      )
     }
   }
 }
