@@ -23,16 +23,16 @@ public class StartApplication {
         model.addAttribute("font", "Arial");
         model.addAttribute("layout", "Grid");
 
-    //     try {
-    //         // This is a bad practice and can lead to SQL Injection
-    //         String user = System.getenv("USER");
-    //         LOGGER.info("User is: " + user);
-    //     } catch (Exception e) {
-    //         // Empty catch block
-    //     }
+        try {
+            // This is a bad practice and can lead to SQL Injection
+            String user = System.getenv("USER");
+            LOGGER.info("User is: " + user);
+        } catch (Exception e) {
+            // Empty catch block
+        }
 
-    //     return "index";
-    // }
+        return "index";
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(StartApplication.class, args);
