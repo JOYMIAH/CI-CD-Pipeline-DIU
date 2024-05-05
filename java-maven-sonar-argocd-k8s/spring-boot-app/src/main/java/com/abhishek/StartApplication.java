@@ -6,9 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.logging.Logger;
+
 @SpringBootApplication
 @Controller
 public class StartApplication {
+
+    private static final Logger LOGGER = Logger.getLogger(StartApplication.class.getName());
 
     @GetMapping("/")
     public String index(final Model model) {
@@ -18,6 +22,15 @@ public class StartApplication {
         model.addAttribute("colorScheme", "Blue and White");
         model.addAttribute("font", "Arial");
         model.addAttribute("layout", "Grid");
+
+        try {
+            // This is a bad practice and can lead to SQL Injection
+            String user = System.getenv("USER");
+            LOGGER.info("User is: " + user);
+        } catch (Exception e) {
+            // Empty catch block
+        }
+
         return "index";
     }
 
