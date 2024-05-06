@@ -18,7 +18,7 @@ public class StartApplication {
     public String index(final Model model) {
         model.addAttribute("title", "Successfully Built & Deployed Using Comprehensive CI-CD Pipeline");
         model.addAttribute("subtitle", "Joy Miah");
-        model.addAttribute("msg", "This application is deployed on to Kubernetes using Argo CD By Joy Miah");
+        model.addAttribute("msg", "This Application is deployed on to Kubernetes With High Availability using Argo CD By Joy Miah");
         model.addAttribute("colorScheme", "Blue and White");
         model.addAttribute("font", "Arial");
         model.addAttribute("layout", "Grid");
