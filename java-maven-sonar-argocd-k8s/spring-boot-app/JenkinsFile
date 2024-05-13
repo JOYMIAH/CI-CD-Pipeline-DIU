@@ -52,6 +52,11 @@ pipeline {
         }
       }
     }
+    stage('Trivy Image Scan') {
+      steps {
+        echo 'Trivy scan would go here'
+      }
+    }
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "CI-CD-Pipeline-DIU "
