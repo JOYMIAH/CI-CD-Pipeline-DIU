@@ -28,9 +28,9 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f8f9fa;
-  background-image: url('https://i.ibb.co/Z1px57n/joy.jpg');
-  background-blend-mode: overlay;
+  background-image: url('https://i.ibb.co/JdPk3f1/lzmsk5oyg7y0y554b2kr.jpg');
   background-size: cover;
+  background-blend-mode: overlay;
 }
 
 .tech-used ul {
@@ -41,26 +41,4 @@ body {
 
 .tech-used ul li {
   font-size: 1em;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-.tech-used ul li strong {
-  color: #007bff;
-}
-
-.ci-cd-image, .software-delivery-image, .personal-image {
-  text-align: center;
-  margin-top: 2em;
-}
-
-.ci-cd-image img, .software-delivery-image img, .personal-image img {
-  max-width: 50%;
-  height: auto;
-}
-
-.personal-info {
-  text-align: center;
-  font-size: 1.2em;
-  color: #007bff;
-}
+  line-height: 1.5
