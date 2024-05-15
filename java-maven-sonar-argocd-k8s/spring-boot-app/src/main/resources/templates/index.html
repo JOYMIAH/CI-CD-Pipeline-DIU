@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link data-th-href="@{/css/main.css?{id}(id=${timestamp})}" rel="stylesheet">
-    <title>CI/CD Master Class By Joy Miah</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <title>CI/CD Pipeline Created By Joy Miah</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"> CI/CD Pipeline Daffodil International University</a>
+    <a class="navbar-brand" href="#"> This Project is Dedicated To Daffodil International University</a>
 </nav>
 
 <main role="main" class="container">
@@ -18,11 +18,11 @@
             <p><strong>Student ID:</strong> 212-15-4108</p>
             <p><strong>Project Title:</strong> Building A Comprehensive Secured CI/CD Pipeline With Integrated Monitoring & Alerting System  To Deploy Application On Kubernetes Cluster With High Availability and Scalability</p>
         </div>
-        <h1 th:text="${title}">Default title.</h1>
-        <p th:text="${subtitle}">Default subtitle.</p>
-        <p th:text="${msg}">Default text.</p>
+        <h1 id="title">Default title.</h1>
+        <p id="subtitle">Default subtitle.</p>
+        <p id="msg">Default text.</p>
         <div class="about-devops">
-            <p><strong>About DevSecOps Engineering:</strong> DevSecOps is a set of practices that combines software development (Dev) and System Security (sec) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</p>
+            <p><strong>About DevOps Engineering:</strong> DevOps & DevSecOps is a set of practices that combines software development (Dev) and System Security (sec) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</p>
         </div>
         <div class="tech-used">
             <p><strong>Technology Used:</strong></p>
@@ -30,21 +30,38 @@
                 <li>Virtuaization(KVM)</li>
                 <li>Linux Server's</li>
                 <li>Jenkins</li>
-                <li>Docker</li>
+                <li>DockerHub</li>
                 <li>Kubernetes</li>
                 <li>SonarQube</li>
                 <li>Trivy</li>
                 <li>ArgoCD</li>
-                <li>Helm</li>
+                <li>Java Applications </li>
                 <li>Promethus</li>
                 <li>Altert-Manager</li>
                 <li>Grafana</li>
             </ul>
         </div>
+        <!-- Add a section for the CI/CD image -->
+        <div class="ci-cd-image">
+            <h2>CI/CD Pipeline</h2>
+            <img src="https://ibb.co/g9DccHc" alt="CI/CD Pipeline">
+            <p>This is the CI/CD pipeline used in the project.</p>
+        </div>
+        <!-- Add a section for the software delivery image -->
+        <div class="software-delivery-image">
+            <h2>Software Delivery</h2>
+            <img src="https://ibb.co/GM3MSxb" alt="Software Delivery">
+            <p>In This Project we are Showcasing software delivery process</p>
+        </div>
+        <!-- Add a section for the personal image -->
+        <div class="personal-image">
+            <h2>About Me</h2>
+            <img src="https://i.ibb.co/Z1px57n/joy.jpg" alt="Joy Miah">
+            <p>This is Joy Miah, the creator of this project.A Passionate DevOps Engineer</p>
+        </div>
     </div>
 </main>
 
-<script data-th-src="@{/js/main.js}"></script>
+<script src="/js/main.js"></script>
 </body>
-
 </html>
