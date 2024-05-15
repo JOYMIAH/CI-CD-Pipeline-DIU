@@ -32,6 +32,7 @@ body {
 .tech-used ul {
   list-style-type: none;
   padding-left: 0;
+  text-align: left;
 }
 
 .tech-used ul li {
