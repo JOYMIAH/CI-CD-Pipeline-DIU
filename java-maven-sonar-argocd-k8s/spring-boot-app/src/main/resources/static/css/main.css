@@ -22,12 +22,19 @@ body {
   font-size: 1.2em;
 }
 
-.container ul {
+.tech-used {
+  margin: 2em 0;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.tech-used ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-.container ul li {
+.tech-used ul li {
   font-size: 1em;
   line-height: 1.5;
 }
@@ -38,6 +45,6 @@ body {
 }
 
 .ci-cd-image img, .software-delivery-image img, .personal-image img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
