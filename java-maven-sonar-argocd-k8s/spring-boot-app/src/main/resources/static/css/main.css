@@ -31,3 +31,13 @@ body {
   font-size: 1em;
   line-height: 1.5;
 }
+
+.ci-cd-image, .software-delivery-image, .personal-image {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.ci-cd-image img, .software-delivery-image img, .personal-image img {
+  max-width: 100%;
+  height: auto;
+}
