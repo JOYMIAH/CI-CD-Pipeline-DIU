@@ -27,6 +27,7 @@ body {
   padding: 1em;
   border: 1px solid #ddd;
   border-radius: 5px;
+  background-color: #f8f9fa;
 }
 
 .tech-used ul {
@@ -38,6 +39,11 @@ body {
 .tech-used ul li {
   font-size: 1em;
   line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.tech-used ul li strong {
+  color: #007bff;
 }
 
 .ci-cd-image, .software-delivery-image, .personal-image {
