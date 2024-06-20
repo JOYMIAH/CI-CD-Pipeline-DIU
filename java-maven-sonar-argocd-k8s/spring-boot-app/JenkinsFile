@@ -78,14 +78,14 @@ pipeline {
         }
     }
   }
-  post {
-    always {
-      emailext (
-        attachLog: true,
-        subject: "${currentBuild.result}",
-        body: "Project: ${env.JOB_NAME}\n\nBuild Number: ${env.BUILD_NUMBER}\n\nURL: ${env.BUILD_URL}\n",
-        to: "joymiah.devops@gmail.com"
-      )
-    }
-  }
+  // post {
+  //   always {
+  //     emailext (
+  //       attachLog: true,
+  //       subject: "${currentBuild.result}",
+  //       body: "Project: ${env.JOB_NAME}\n\nBuild Number: ${env.BUILD_NUMBER}\n\nURL: ${env.BUILD_URL}\n",
+  //       to: "joymiah.devops@gmail.com"
+  //     )
+  //   }
+  // }
 }
